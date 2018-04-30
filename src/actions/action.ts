@@ -22,10 +22,33 @@ export class Action {
   }
 
   protected async requestGet(endpoint: string): Promise<any> {
-    return request.get(
+    return this.sendRequest(
+      'GET',
       `${
         this.config.sandbox ? this.sandboxUrl : this.productionUrl
       }${endpoint}`,
     );
+  }
+
+  private async sendRequest(
+    method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+    url: string,
+    values?: any,
+  ): Promise<any> {
+    const options = {
+      url,
+      method,
+      headers: {
+        'content-type': 'application/json',
+        Authorization: `Bearer ${this.config.apiKey}`,
+      },
+      json: true,
+    };
+
+    if (values) {
+      options['body'] = values;
+    }
+
+    return request(options);
   }
 }
