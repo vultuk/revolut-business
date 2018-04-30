@@ -1,5 +1,5 @@
 import * as request from 'request-promise-native';
-import {Config} from '../types/config.type';
+import {Config} from '../types';
 
 export class Action {
     protected config: Config = undefined;
@@ -16,6 +16,8 @@ export class Action {
                 apiKey: process.env.REVOLUT_API_KEY,
                 sandbox: process.env.REVOLUT_SANDBOX.toLowerCase() === 'true' || false,
             } as Config;
+        } else {
+            this.config = config;
         }
     }
 

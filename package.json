@@ -1,6 +1,6 @@
 {
   "name": "revolut-business",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A module to interact with the revolut business API",
   "scripts": {
     "build": "npm run clean && tsc -d",
