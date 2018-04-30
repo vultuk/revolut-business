@@ -1,5 +1,5 @@
 import { Action } from './action';
-import { Account } from '../types/account.type';
+import { Account } from '../types';
 import * as moment from 'moment';
 
 export class AccountsAction extends Action {
