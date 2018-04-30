@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.5"></a>
+## [1.0.5](https://github.com/vultuk/revolut-business/compare/v1.0.3...v1.0.5) (2018-04-30)
+
+
+### Bug Fixes
+
+* **Auth:** Added auth token to the headers when sending a request ([3ae5998](https://github.com/vultuk/revolut-business/commit/3ae5998))
+* **Auth:** Added auth token to the headers when sending a request ([2a880ab](https://github.com/vultuk/revolut-business/commit/2a880ab))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/vultuk/revolut-business/compare/v1.0.3...v1.0.2) (2018-04-30)
 
