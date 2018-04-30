@@ -1,0 +1,56 @@
+{
+  "name": "revolut-business",
+  "version": "1.0.0",
+  "description": "A module to interact with the revolut business API",
+  "scripts": {
+    "build": "npm run clean && tsc -d",
+    "clean": "rimraf dist",
+    "format": "prettier --write \"**/*.ts\"",
+    "release": "npm run clean && npm run format && tsc -d && standard-version && git push --follow-tags origin master && npm publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "./dist/main.js",
+  "typings": "./dist/main.d.ts",
+  "keywords": [
+    "revolut",
+    "business",
+    "banking",
+    "api"
+  ],
+  "author": "Simon Skinner <simon@sisk-ltd.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vultuk/revolut-business/issues"
+  },
+  "homepage": "https://github.com/vultuk/revolut-business#readme",
+  "dependencies": {
+    "moment": "2.22.1",
+    "request": "2.85.0",
+    "request-promise-native": "1.0.5"
+  },
+  "devDependencies": {
+    "@types/jest": "22.2.3",
+    "@types/node": "10.0.0",
+    "jest": "22.4.3",
+    "prettier": "1.12.1",
+    "rimraf": "2.6.2",
+    "standard-version": "4.3.0",
+    "ts-jest": "22.4.4",
+    "ts-node": "6.0.2",
+    "tslint": "5.9.1",
+    "typescript": "2.8.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage"
+  }
+}
