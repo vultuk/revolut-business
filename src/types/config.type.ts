@@ -1,4 +1,4 @@
 export class Config {
-    public apiKey: string;
-    public sandbox?: boolean;
+  public apiKey: string;
+  public sandbox?: boolean;
 }
