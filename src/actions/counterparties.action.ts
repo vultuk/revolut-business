@@ -15,22 +15,25 @@ export class CounterpartiesAction extends Action {
           state: counterparty.state,
           createdAt: moment(counterparty.created_at),
           updatedAt: moment(counterparty.updated_at),
-          accounts: counterparty.accounts.map(account => {
-            return {
-              id: account.id,
-              currency: account.currency,
-              type: account.type,
-              accountNo: account.accountNo || undefined,
-              iban: account.iban || undefined,
-              sortCode: account.sortCode || undefined,
-              routingNumber: account.routingNumber || undefined,
-              bic: account.bic || undefined,
-              email: account.email || undefined,
-              name: account.name || undefined,
-              bankCountry: account.bankCountry || undefined,
-              recipientCharges: account.recipientCharges || undefined,
-            } as CounterpartyAccount;
-          }),
+          accounts:
+            !counterparty.accounts || counterparty.accounts.length < 1
+              ? []
+              : counterparty.accounts.map(account => {
+                  return {
+                    id: account.id,
+                    currency: account.currency,
+                    type: account.type,
+                    accountNo: account.accountNo || undefined,
+                    iban: account.iban || undefined,
+                    sortCode: account.sortCode || undefined,
+                    routingNumber: account.routingNumber || undefined,
+                    bic: account.bic || undefined,
+                    email: account.email || undefined,
+                    name: account.name || undefined,
+                    bankCountry: account.bankCountry || undefined,
+                    recipientCharges: account.recipientCharges || undefined,
+                  } as CounterpartyAccount;
+                }),
         } as Counterparty;
       }),
     );
@@ -48,22 +51,25 @@ export class CounterpartiesAction extends Action {
           state: counterparty.state,
           createdAt: moment(counterparty.created_at),
           updatedAt: moment(counterparty.updated_at),
-          accounts: counterparty.accounts.map(account => {
-            return {
-              id: account.id,
-              currency: account.currency,
-              type: account.type,
-              accountNo: account.accountNo || undefined,
-              iban: account.iban || undefined,
-              sortCode: account.sortCode || undefined,
-              routingNumber: account.routingNumber || undefined,
-              bic: account.bic || undefined,
-              email: account.email || undefined,
-              name: account.name || undefined,
-              bankCountry: account.bankCountry || undefined,
-              recipientCharges: account.recipientCharges || undefined,
-            } as CounterpartyAccount;
-          }),
+          accounts:
+            !counterparty.accounts || counterparty.accounts.length < 1
+              ? []
+              : counterparty.accounts.map(account => {
+                  return {
+                    id: account.id,
+                    currency: account.currency,
+                    type: account.type,
+                    accountNo: account.accountNo || undefined,
+                    iban: account.iban || undefined,
+                    sortCode: account.sortCode || undefined,
+                    routingNumber: account.routingNumber || undefined,
+                    bic: account.bic || undefined,
+                    email: account.email || undefined,
+                    name: account.name || undefined,
+                    bankCountry: account.bankCountry || undefined,
+                    recipientCharges: account.recipientCharges || undefined,
+                  } as CounterpartyAccount;
+                }),
         } as Counterparty;
       },
     );

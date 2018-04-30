@@ -1,13 +1,12 @@
 {
   "name": "revolut-business",
-  "version": "1.0.7",
+  "version": "1.1.3",
   "description": "A module to interact with the revolut business API",
   "scripts": {
     "build": "npm run clean && npm run format && tsc -d",
     "clean": "rimraf dist",
     "format": "prettier --write \"**/*.ts\"",
-    "release": "standard-version",
-    "publish": "git push --follow-tags origin master && npm publish",
+    "release": "standard-version && git push --follow-tags origin master",
     "version": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
